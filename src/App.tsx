@@ -81,7 +81,7 @@ export default function App() {
               Transformando sorrisos com tecnologia, segurança e o cuidado que você merece. Agende sua avaliação e descubra o seu melhor sorriso.
             </p>
             
-            <button onClick={handleWhatsAppClick} className="whatsapp-btn w-full md:w-auto mb-4">
+            <button onClick={handleWhatsAppClick} className="whatsapp-btn w-full md:w-auto mb-6">
               <MessageCircle size={24} />
               Agendar consulta gratuita
             </button>
@@ -95,6 +95,26 @@ export default function App() {
 
       {/* Who Am I Section */}
       <section className="py-20 px-6 bg-white">
+        <div className="max-w-5xl mx-auto mb-16 flex flex-col items-center text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center"
+          >
+            <img 
+              src={IMAGES.logo} 
+              alt="Ortho Plus Logo" 
+              className="h-24 md:h-32 w-auto object-contain mb-4"
+              referrerPolicy="no-referrer"
+            />
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-primary tracking-wide">
+              Ortho Plus
+            </h2>
+            <div className="w-12 h-1 bg-brand-accent mt-4 rounded-full" />
+          </motion.div>
+        </div>
+
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -318,17 +338,25 @@ export default function App() {
       {/* Footer */}
       <footer className="py-12 px-6 bg-white border-t border-slate-100">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-center md:text-left">
-            <h3 className="text-xl font-serif font-bold text-brand-primary">{EXPERT_DATA.name}</h3>
-            <p className="text-slate-500 text-sm">{EXPERT_DATA.profession}</p>
-            <a 
-              href={EXPERT_DATA.locationLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center md:justify-start gap-1 text-xs text-slate-400 mt-2 hover:text-brand-accent transition-colors"
-            >
-              <MapPin size={12} /> {EXPERT_DATA.location}
-            </a>
+          <div className="text-center md:text-left flex flex-col items-center md:items-start gap-4">
+            <img 
+              src={IMAGES.logo} 
+              alt="Logo" 
+              className="h-10 w-auto object-contain opacity-80"
+              referrerPolicy="no-referrer"
+            />
+            <div>
+              <h3 className="text-xl font-serif font-bold text-brand-primary">{EXPERT_DATA.name}</h3>
+              <p className="text-slate-500 text-sm">{EXPERT_DATA.profession}</p>
+              <a 
+                href={EXPERT_DATA.locationLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center md:justify-start gap-1 text-xs text-slate-400 mt-2 hover:text-brand-accent transition-colors"
+              >
+                <MapPin size={12} /> {EXPERT_DATA.location}
+              </a>
+            </div>
           </div>
 
           <div className="flex gap-4">

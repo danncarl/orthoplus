@@ -11,11 +11,12 @@ export const EXPERT_DATA = {
   ],
   location: "Ipixuna - AM",
   locationLink: "https://maps.app.goo.gl/Rp1CC22HQNXKhurG9",
-  whatsapp: "https://api.whatsapp.com/qr/F3V5N2OSAWWPA1?autoload=1&app_absent=0&utm_source=ig",
+  whatsapp: "https://wa.me/5597984116292?text=Ol%C3%A1%2C%20Dr.%20Carlos%20Alberto!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20atendimento%20odontol%C3%B3gico%2C%20por%20favor.",
   instagram: "https://www.instagram.com/orthoplusodonto12/",
 };
 
 export const IMAGES = {
+  logo: "https://i.imgur.com/HIrpwWl.png",
   hero: "https://i.imgur.com/ftrasdX.png",
   authority: [
     "https://i.imgur.com/Wkt17KM.png",
